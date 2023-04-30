@@ -14,7 +14,7 @@ namespace ShapeTracker.Models
       _side1 = length1;
       _side2 = length2;
       _side3 = length3;
-      _instance.Add(this);
+      _instances.Add(this);
     }
 
     public int GetSide1()
@@ -72,7 +72,7 @@ namespace ShapeTracker.Models
     }
     public static void ClearAll()
     {
-      _isntances.Clear();
+      _instances.Clear();
     }
   }
 }
