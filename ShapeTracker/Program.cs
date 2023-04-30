@@ -1,6 +1,5 @@
 using System;
 using ShapeTracker.Models;
-using System.Collections.Generic;
 
 namespace ShapeTracker
 {
@@ -8,24 +7,19 @@ namespace ShapeTracker
   {
     static void Main()
     {
-      List<Triangle> allTriangles = Triangle.GetAll();
-      Triangle testTriangle = new Triangle(3,4,5);
-      Triangle secondTriangle = new Triangle(32,74,75);
-      if (allTriangles.Count == 0)
-      {
-        Console.WriteLine("There are no triangles!");
-      }
-      else
-      {
-        Console.WriteLine("-----------------------------");
-        foreach (Triangle tri in allTriangles)
-        {
-          Console.WriteLine($"Side one of the triangle: {testTriangle.GetSide1()}");
-          Console.WriteLine($"Side two of the triangle: {testTriangle.GetSide2()}");
-          Console.WriteLine($"Side three of the triangle: {testTriangle.GetSide3()}");
-          Console.WriteLine("-----------------------------");
-        }
-      }
+      Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
+      Console.WriteLine("Welcome to the Shape Tracker app!");
+      Console.WriteLine("We'll caclulate what type of triangle you have based off of the lengths of the triangle's 3 sides.");
+      Console.WriteLine("Please enter a number:");
+      string stringNumber1 = Console.ReadLine();
+      Console.WriteLine("Enter another number:");
+      string stringNumber2 = Console.ReadLine();
+      Console.WriteLine("Enter a third number:");
+      string stringNumber3 = Console.ReadLine();
+      int length1 = int.Parse(stringNumber1);
+      int length2 = int.Parse(stringNumber2);
+      int length3 = int.Parse(stringNumber3);
+      Triangle tri = new Triangle(length1, length2, length3);
     }
   }
 }
