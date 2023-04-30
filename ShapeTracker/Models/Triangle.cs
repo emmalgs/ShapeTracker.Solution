@@ -67,7 +67,7 @@ namespace ShapeTracker.Models
     }
     public static void ClearAll()
     {
-      _isntances.Clear();
+      _instances.Clear();
     }
   }
 }
