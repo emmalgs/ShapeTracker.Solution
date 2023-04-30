@@ -1,5 +1,6 @@
 using System;
 using ShapeTracker.Models;
+using ShapeTracker.UserInterfaceModels;
 
 namespace ShapeTracker
 {
@@ -7,7 +8,7 @@ namespace ShapeTracker
   {
     static void Main()
     {
-      Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
+      Console.WriteLine($"{WelcomeBanner.Welcome}");
       Console.WriteLine("Welcome to the Shape Tracker app!");
       Console.WriteLine("We'll caclulate what type of triangle you have based off of the lengths of the triangle's 3 sides.");
       Console.WriteLine("Please enter a number:");
