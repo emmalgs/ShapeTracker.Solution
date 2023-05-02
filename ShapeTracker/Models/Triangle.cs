@@ -23,7 +23,7 @@ namespace ShapeTracker.Models
       _instances.Add(this);
     }
     
-    public Triangle(int length1, int length2, int length3, string userGuess) : this(length1, length 2, length3)
+    public Triangle(int length1, int length2, int length3, string userGuess) : this(length1, length2, length3)
     {
       Guess = userGuess;
     }
