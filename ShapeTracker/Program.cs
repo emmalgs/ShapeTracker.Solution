@@ -17,11 +17,21 @@ namespace ShapeTracker
       string stringNumber2 = Console.ReadLine();
       Console.WriteLine("Enter a third number:");
       string stringNumber3 = Console.ReadLine();
-      int length1 = int.Parse(stringNumber1);
-      int length2 = int.Parse(stringNumber2);
-      int length3 = int.Parse(stringNumber3);
-      Triangle tri = new Triangle(length1, length2, length3);
-      ConfirmOrEditTriangle(tri);
+      try
+      {
+        int length1 = int.Parse(stringNumber1);
+        int length2 = int.Parse(stringNumber2);
+        int length3 = int.Parse(stringNumber3);
+        Triangle tri = new Triangle(length1, length2, length3);
+        ConfirmOrEditTriangle(tri);
+      }
+      catch
+      {
+        Console.WriteLine("!!!!!!!!!!!!!!!!!!!!");
+        Console.WriteLine("Error: Please only enter numbers. Special symbols and alphabetical characters will not be accpted.");
+        Console.WriteLine("Please try again...");
+        Main();
+      }
     }
 
     static void ConfirmOrEditTriangle(Triangle tri)
